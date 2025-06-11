@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-Time Sentiment Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="background-blur"></div>
+
+  <button onclick="toggleDarkMode()" class="toggle-btn">🌙 Toggle Dark Mode</button>
+
+  <div class="container">
+    <h1>💬 Sentiment Analyzer</h1>
+    
+    <textarea id="textInput" placeholder="Type something..."></textarea>
+    <button onclick="analyzeSentiment()">🔍 Analyze</button>
+    
+    <div id="result" class="result-box"></div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function analyzeSentiment() {
+      const text = document.getElementById("textInput").value;
+      fetch("/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text })
+      })
+      .then(res => res.json())
+      .then(data => {
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `
+          <strong>🧠 Sentiment:</strong> ${data.sentiment}<br><br>
+          <strong>📊 Score:</strong><br>
+          <pre>${JSON.stringify(data.score, null, 2)}</pre>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>
