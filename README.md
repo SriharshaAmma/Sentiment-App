@@ -17,20 +17,6 @@ A sleek, interactive web app that performs real-time sentiment analysis on user 
 
 ---
 
-## 🖼️ Preview
-
- https://github.com/SriharshaAmma/Sentiment-Analysis/blob/main/Screenshot%20from%202025-05-30%2016-06-24.png
- 
-https://github.com/SriharshaAmma/Sentiment-Analysis/blob/main/Screenshot%20from%202025-05-30%2016-06-32.png
-
-https://github.com/SriharshaAmma/Sentiment-Analysis/blob/main/Screenshot%20from%202025-05-30%2016-06-46.png
-
-https://github.com/SriharshaAmma/Sentiment-Analysis/blob/main/Screenshot%20from%202025-05-30%2016-07-03.png
-
-https://github.com/SriharshaAmma/Sentiment-Analysis/blob/main/Screenshot%20from%202025-05-30%2016-07-37.png
-
----
-
 ## 🛠️ Tech Stack
 
 ### 🔧 Frontend:
